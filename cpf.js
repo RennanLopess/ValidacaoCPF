@@ -25,3 +25,14 @@ function atualizarHistorico() {
     historicoLista.appendChild(li);
   });
 }
+
+document.getElementById('cpfInput').addEventListener('keypress', (e) => { if (e.key === 'Enter') validarCPF(); });
+document.getElementById('validarCpf').addEventListener('click', () => validarCPF());
+
+function validarCPF() {
+  const cpf = document.getElementById('cpfInput').value.replace(/\D/g, ''); // Remove qualquer caractere não numérico
+  const cpfFormatado = formatarCpf(cpf);
+  const resultado = validarCpf(cpf) ? `CPF ${cpfFormatado} Válido ✅` : `CPF ${cpfFormatado} Inválido ❌`;
+  document.getElementById('resultadoCpf').textContent = resultado;
+  adicionarHistorico(resultado);
+}
