@@ -117,3 +117,30 @@ button {
 button:hover {
   background-color: var(--button-hover);
 }
+
+#resultadoCpf {
+  font-weight: 600;
+}
+
+.valido {
+  color: var(--accent);
+}
+
+.invalido {
+  color: var(--danger);
+}
+
+.historico {
+  margin-top: 30px;
+}
+
+.historico h2 {
+  font-size: 18px;
+  color: var(--accent);
+}
+
+#historico-lista {
+  list-style: none;
+  padding-left: 0;
+  font-size: 14px;
+}
