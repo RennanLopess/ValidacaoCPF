@@ -52,3 +52,68 @@ h1 {
   color: var(--accent);
   margin-bottom: 20px;
 }
+
+button#toggleTheme {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--text);
+}
+
+button.tab-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: var(--button-bg);
+  color: var(--bg);
+  font-weight: bold;
+  cursor: pointer;
+  margin: 5px;
+  transition: opacity 0.3s;
+}
+
+button.tab-button:hover {
+  opacity: 0.85;
+}
+
+button.tab-button:hover {
+  opacity: 0.85;
+}
+
+.tab-content {
+  display: none;
+  margin-top: 20px;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.form-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+}
+
+button {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--button-bg);
+  color: var(--bg);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+}
