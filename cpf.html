@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,27 +8,33 @@
   <link rel="stylesheet" href="css/cpf.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <div class="container">
-      <div class="top-bar">
-        <h1>Validação de CPF</h1>
-        <button id="toggleTheme" title="Alterar Tema">🌙</button>
-      </div>
-
-      <div class="button-group">
-        <button class="tap-button" id="btn-cpf" onclick="mostrarAba('cpf')">CPF</button>
-      </div>
-
-        <div id="cpf" class="tab-content active">
-          <h2>Validação de CPF</h2>
-          <div class="form-group">
-            <input type="text" id="cpfInput" placeholder="Digite o CPF" maxlength="11" />
-             <button id="validarCpf">Validar</button>
-          </div>
-           <div id="resultadoCpf"></div>
-        </div>
-
+  <div class="container">
+    <div class="top-bar">
+      <h1>Validação de CPF</h1>
+      <button id="toggleTheme" title="Alterar Tema">🌙</button>
     </div>
 
-    <script src="cpf.js"></script>
+    <div class="button-group">
+      <button class="tap-button" id="btn-cpf" onclick="mostrarAba('cpf')">CPF</button>
+    </div>
+
+    <div id="cpf" class="tab-content active">
+      <h2>Validação de CPF</h2>
+      <div class="form-group">
+        <input type="text" id="cpfInput" placeholder="Digite o CPF" maxlength="11" />
+        <button id="validarCpf">Validar</button>
+      </div>
+      <div id="resultadoCpf"></div>
+    </div>
+
+    <div class="historico">
+      <h2>Histórico de Validações</h2>
+      <ul id="historico-lista"></ul>
+    </div>
+  </div>
+  </div>
+
+  <script src="cpf.js"></script>
 </body>
