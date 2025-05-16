@@ -36,3 +36,35 @@ function validarCPF() {
   document.getElementById('resultadoCpf').textContent = resultado;
   adicionarHistorico(resultado);
 }
+
+// Funções de validação
+function validarCpf(cpf) {
+  if (cpf.length !== 11 || /^(\d)\1{10}$/.test(cpf)) return false; // Verifica se todos os números são iguais
+  
+  // Valida o primeiro dígito verificador
+  let soma = 0;
+  let resto;
+  for (let i = 0; i < 9; i++) {
+    soma += parseInt(cpf.charAt(i)) * (10 - i);
+  }
+  resto = soma % 11;
+  if (resto < 2) resto = 0;
+  else resto = 11 - resto;
+  if (resto !== parseInt(cpf.charAt(9))) return false;
+  
+  // Valida o segundo dígito verificador
+  soma = 0;
+  for (let i = 0; i < 10; i++) {
+    soma += parseInt(cpf.charAt(i)) * (11 - i);
+  }
+  resto = soma % 11;
+  if (resto < 2) resto = 0;
+  else resto = 11 - resto;
+  return resto === parseInt(cpf.charAt(10));
+}
+
+
+function formatarCpf(cpf) {
+  return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
+}
+
