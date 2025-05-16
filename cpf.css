@@ -1,0 +1,33 @@
+:root {
+  --bg: #121212;
+  --text: #f5f5f5;
+  --accent: #00ff88;
+  --danger: #ff4c4c;
+  --card: #1e1e1e;
+  --button-bg: #007744;
+  --button-hover: #005e33;
+}
+
+body.light {
+  --bg: #f5f5f5;
+  --text: #111;
+  --accent: #007744;
+  --danger: #b00020;
+  --card: #ffffff;
+  --button-bg: #00ff88;
+  --button-hover: #009c5e;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
